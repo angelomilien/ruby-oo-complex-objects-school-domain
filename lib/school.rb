@@ -6,9 +6,9 @@ class School
 
     attr_reader :name, :roster
 
-    def initialize(name, roster={})
+    def initialize(name)
        @name = name
-       @roster = roster
+       @roster = {}
     end
 
     def add_student(student_name, grade)
@@ -32,7 +32,6 @@ class School
     def sort
        @roster.collect do |k,v|
        @roster[k] = v.sort
-        
        end 
        @roster
     end
